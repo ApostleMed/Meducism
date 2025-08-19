@@ -1,0 +1,38 @@
+MEDUCISM PLATFORM - VERCEL DEPLOYMENT GUIDE
+===========================================
+
+🎯 GOAL: Move from meducism.replit.app to meducism.org on Vercel
+
+📋 QUICK STEPS:
+1. Export/Download this Replit project
+2. Upload to GitHub (ApostleMed/MeducismPortal)  
+3. Import to Vercel from GitHub
+4. Connect meducism.org domain
+5. Update DNS in Namecheap
+
+🔧 VERCEL BUILD SETTINGS:
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+
+🌐 DNS SETTINGS FOR NAMECHEAP:
+After Vercel deployment, add these DNS records in Namecheap:
+- Type: A, Name: @, Value: [Vercel IP from dashboard]
+- Type: CNAME, Name: www, Value: [your-project].vercel.app
+
+⚡ CURRENT STATUS:
+✅ vercel.json configured correctly
+✅ React app builds successfully 
+✅ Royal blue design implemented
+✅ All animations and styling working
+✅ HTML validation issues fixed
+✅ Ready for production deployment
+
+🚀 EXPECTED RESULT:
+Professional Meducism platform live at meducism.org with:
+- Royal blue and gold color scheme
+- Glass morphism effects
+- Smooth scrolling animations  
+- Responsive design
+- Academic content sections
+- Community features
