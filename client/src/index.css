@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Premium Color Palette - Sophisticated Healthcare Theme */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(220 30% 18%);
+  --card: hsl(210 20% 98%);
+  --card-foreground: hsl(220 30% 18%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(220 30% 18%);
+  --primary: hsl(215 85% 35%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(280 60% 45%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(210 25% 93%);
+  --muted-foreground: hsl(220 20% 35%);
+  --accent: hsl(45 95% 50%);
+  --accent-foreground: hsl(220 30% 18%);
+  --healthcare-green: hsl(165 70% 35%);
+  --healthcare-green-foreground: hsl(0 0% 100%);
+  --healthcare-purple: hsl(275 55% 50%);
+  --healthcare-navy: hsl(220 70% 25%);
+  --healthcare-gold: hsl(40 85% 45%);
+  --text-primary: hsl(220 30% 18%);
+  --text-secondary: hsl(220 20% 35%);
+  --light-grey: hsl(220 15% 95%);
+  --destructive: hsl(0 75% 45%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(214 20% 88%);
+  --input: hsl(214 20% 88%);
+  --ring: hsl(215 85% 35%);
+  --chart-1: hsl(215 85% 35%);
+  --chart-2: hsl(165 70% 35%);
+  --chart-3: hsl(45 95% 50%);
+  --chart-4: hsl(280 60% 45%);
+  --chart-5: hsl(275 55% 50%);
+  --sidebar: hsl(210 20% 98%);
+  --sidebar-foreground: hsl(220 30% 18%);
+  --sidebar-primary: hsl(215 85% 35%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(210 25% 93%);
+  --sidebar-accent-foreground: hsl(215 85% 35%);
+  --sidebar-border: hsl(214 20% 88%);
+  --sidebar-ring: hsl(215 85% 35%);
+  --font-sans: 'Open Sans', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'Menlo', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(215 28% 6%);
+  --foreground: hsl(213 31% 91%);
+  --card: hsl(215 28% 8%);
+  --card-foreground: hsl(213 31% 91%);
+  --popover: hsl(215 28% 6%);
+  --popover-foreground: hsl(213 31% 91%);
+  --primary: hsl(197 61% 42%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(330 50% 49%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(215 28% 12%);
+  --muted-foreground: hsl(213 13% 65%);
+  --accent: hsl(32 95% 48%);
+  --accent-foreground: hsl(0 0% 100%);
+  --healthcare-green: hsl(122 39% 49%);
+  --healthcare-green-foreground: hsl(0 0% 100%);
+  --text-primary: hsl(213 31% 91%);
+  --light-grey: hsl(215 28% 10%);
+  --destructive: hsl(356 91% 54%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(215 28% 15%);
+  --input: hsl(215 28% 15%);
+  --ring: hsl(203 89% 53%);
+  --chart-1: hsl(203 89% 53%);
+  --chart-2: hsl(160 100% 36%);
+  --chart-3: hsl(42 93% 56%);
+  --chart-4: hsl(147 79% 42%);
+  --chart-5: hsl(341 75% 51%);
+  --sidebar: hsl(215 28% 8%);
+  --sidebar-foreground: hsl(213 31% 91%);
+  --sidebar-primary: hsl(203 89% 53%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(215 28% 12%);
+  --sidebar-accent-foreground: hsl(203 89% 53%);
+  --sidebar-border: hsl(215 28% 15%);
+  --sidebar-ring: hsl(203 89% 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .font-merriweather {
+    font-family: var(--font-serif);
+  }
+  
+  .font-open-sans {
+    font-family: var(--font-sans);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .text-healthcare-green {
+    color: var(--healthcare-green);
+  }
+
+  .text-text-primary {
+    color: var(--text-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+  .bg-healthcare-green {
+    background-color: var(--healthcare-green);
+  }
+
+  .bg-light-grey {
+    background-color: var(--light-grey);
+  }
+
+  .border-primary {
+    border-color: var(--primary);
+  }
+
+  .border-secondary {
+    border-color: var(--secondary);
+  }
+
+  .border-accent {
+    border-color: var(--accent);
+  }
+
+  .border-healthcare-green {
+    border-color: var(--healthcare-green);
+  }
+
+  .hover\:bg-primary\/90:hover {
+    background-color: hsl(215 85% 35% / 0.9);
+  }
+
+  .hover\:bg-secondary\/90:hover {
+    background-color: hsl(280 60% 45% / 0.9);
+  }
+  
+  /* Premium Gradient Backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(215 85% 35%), hsl(280 60% 45%));
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(165 70% 35%), hsl(215 85% 35%));
+  }
+  
+  .gradient-premium {
+    background: linear-gradient(135deg, hsl(220 70% 25%), hsl(215 85% 35%), hsl(280 60% 45%));
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(40 85% 45%), hsl(45 95% 50%));
+  }
+  
+  /* Dynamic Scrolling Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  
+  /* Parallax Effect */
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Professional Box Shadows */
+  .shadow-premium {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-premium-hover:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  
+  /* Text Gradients */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(215 85% 35%), hsl(280 60% 45%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(40 85% 45%), hsl(45 95% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Glass Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Professional Button Styles */
+  .btn-premium {
+    background: linear-gradient(135deg, hsl(215 85% 35%), hsl(215 85% 45%));
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-premium:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .btn-premium:hover:before {
+    left: 100%;
+  }
+
+  .hover\:bg-accent\/90:hover {
+    background-color: hsl(32 95% 48% / 0.9);
+  }
+
+  .hover\:bg-healthcare-green\/90:hover {
+    background-color: hsl(122 39% 49% / 0.9);
+  }
+}
